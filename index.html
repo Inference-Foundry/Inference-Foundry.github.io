@@ -2,132 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Inference Foundry — Bare-metal AI execution environments and zero-overhead local inference architectures." />
-  <title>INFERENCE_FOUNDRY</title>
-  <link rel="stylesheet" href="css/brutalist.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Inference Foundry is an open-source organization building tools and research for efficient local inference, large language models, and generative models." />
+  <meta name="theme-color" content="#1e3a5f" />
+  <title>Inference Foundry</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/inference-foundry-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <meta property="og:title" content="Inference Foundry" />
+  <meta property="og:description" content="Open-source tools and research for efficient inference and modern ML systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://inference-foundry.github.io/assets/images/inference-foundry-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
-
-  <!-- ======================================================
-       HEADER — STATUS BAR
-       ====================================================== -->
-  <header>
-    <span class="logo">[ INFERENCE_FOUNDRY ]</span>
-    <div class="status-bar">
-      <span class="status-dot" aria-hidden="true"></span>
-      <span class="status-text">SYS.STATUS: ONLINE</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="https://inference-foundry.github.io/" aria-current="page">
+        <img class="brand__logo" src="assets/images/inference-foundry-logo.jpg" width="44" height="44" alt="" decoding="async" />
+        <span class="brand__text">
+          <span class="brand__name">Inference Foundry</span>
+          <span class="brand__tag">Open-source · Efficient inference</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#focus">Focus</a>
+        <a href="#projects">Projects</a>
+        <a href="#principles">Principles</a>
+        <a href="https://github.com/Inference-Foundry" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://discord.gg/inference-foundry" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Discord</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-
-    <!-- ======================================================
-         HERO — THE MISSION
-         ====================================================== -->
-    <section id="hero" aria-labelledby="hero-headline">
-      <h1 class="hero-headline" id="hero-headline">
-        BYPASSING THE NETWORK.<br />TALKING TO THE METAL.
-      </h1>
-      <p class="hero-subtext">
-        We engineer bare-metal AI execution environments and research
-        zero-overhead local inference architectures. We reject HTTP overhead.
-        We reject runtime bloat.
-      </p>
-    </section>
-
-    <!-- ======================================================
-         TELEMETRY — LIVE SYSTEM BASELINES
-         ====================================================== -->
-    <section id="telemetry" aria-labelledby="telemetry-label">
-      <p class="section-label" id="telemetry-label">// LIVE SYSTEM BASELINES</p>
-      <div class="telemetry-grid" role="list">
-
-        <article class="telemetry-cell" role="listitem">
-          <p class="telemetry-label">CLI INFERENCE OVERHEAD</p>
-          <p class="telemetry-value green">ELIMINATED (0.0ms)</p>
-        </article>
-
-        <article class="telemetry-cell" role="listitem">
-          <p class="telemetry-label">CGO CONTEXT SWITCH</p>
-          <p class="telemetry-value amber">&lt; 1.2µs</p>
-        </article>
-
-        <article class="telemetry-cell" role="listitem">
-          <p class="telemetry-label">VRAM LEAK DETECTIONS</p>
-          <p class="telemetry-value green">0 BYTES</p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ======================================================
-         PROJECTS — FLAGSHIP TOOLING
-         ====================================================== -->
-    <section id="projects" aria-labelledby="projects-label">
-      <p class="section-label" id="projects-label">// FLAGSHIP TOOLING</p>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <h2 class="project-title">super-ollama</h2>
-          <p class="project-subtitle">Terminal-native local LLM engine</p>
-          <p class="project-desc">
-            Embeds the llama.cpp backend directly into the terminal process via
-            a highly optimized CGo bridge. Achieves zero HTTP latency by
-            bypassing standard client-server ML architectures.
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__inner">
+        <div class="hero__visual">
+          <div class="hero__logo-card">
+            <img src="assets/images/inference-foundry-logo.jpg" alt="Inference Foundry logo — gear and neural motif" width="340" height="200" decoding="async" />
+          </div>
+        </div>
+        <div class="hero__content">
+          <h1 id="hero-heading">Research-grade tooling for local inference</h1>
+          <p class="hero__lead">
+            We build open-source software alongside research in language models, diffusion, and systems ML—with an emphasis on measurable performance, honest benchmarks, and sustainable engineering.
           </p>
-          <p class="project-commit">HEAD -&gt; main: 4f3a820</p>
-        </article>
-
-        <article class="project-card">
-          <h2 class="project-title">Crucible</h2>
-          <p class="project-subtitle">Open-source research journal</p>
-          <p class="project-desc">
-            Strict mathematical breakdowns and architectural profiling of modern
-            ML literature. Empirical hardware benchmarking only.
-          </p>
-        </article>
-
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://github.com/Inference-Foundry" target="_blank" rel="noopener noreferrer">View organization on GitHub</a>
+            <a class="btn btn--ghost" href="#projects">Explore projects</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ======================================================
-         PROTOCOL — ENGINEERING RULES
-         ====================================================== -->
-    <section id="protocol" aria-labelledby="protocol-label">
-      <p class="section-label" id="protocol-label">// ENGINEERING PROTOCOL</p>
-      <div class="protocol-block" role="list">
-
-        <p class="protocol-rule" role="listitem">
-          <span class="rule-prefix" aria-hidden="true">&gt;</span>
-          RULE 01: Evidence-Based Only. Bring flamegraphs or benchmark data.
-          Subjective tooling debates are rejected.
+    <section class="section section--alt" id="focus" aria-labelledby="focus-heading">
+      <div class="section__inner">
+        <p class="section__eyebrow">What we work on</p>
+        <h2 class="section__title" id="focus-heading">Focus areas</h2>
+        <p class="section__intro">
+          The Foundry brings together systems-minded contributors who care about what happens on real hardware—not only on slides.
         </p>
-
-        <p class="protocol-rule" role="listitem">
-          <span class="rule-prefix" aria-hidden="true">&gt;</span>
-          RULE 02: Ruthless Memory Safety. CGo allocations must be explicitly
-          freed. Missed OS signal traps result in instant PR rejection.
-        </p>
-
+        <div class="focus-grid">
+          <article class="focus-card">
+            <h3>Efficient inference</h3>
+            <p>Low-overhead runtimes, careful memory lifecycle, and reproducible latency and throughput measurements.</p>
+          </article>
+          <article class="focus-card">
+            <h3>Language &amp; generative models</h3>
+            <p>Tools and experiments grounded in current LLM and diffusion research, shared as open code and docs.</p>
+          </article>
+          <article class="focus-card">
+            <h3>Open collaboration</h3>
+            <p>Contributions welcome where evidence and scope are clear—see each repository for contribution guidelines.</p>
+          </article>
+        </div>
       </div>
     </section>
 
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="section__inner">
+        <p class="section__eyebrow">Repositories</p>
+        <h2 class="section__title" id="projects-heading">Projects</h2>
+        <p class="section__intro">
+          Active and upcoming initiatives under the Inference Foundry GitHub organization.
+        </p>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>super-ollama</h3>
+            <p class="meta">Terminal-native local LLM engine</p>
+            <p>
+              In-process inference with a strong systems focus: embed <code>llama.cpp</code> via CGo, avoid unnecessary server overhead in the default UX, and prioritize stable teardown and profiling discipline.
+            </p>
+            <div class="project-card__links">
+              <a href="https://github.com/Inference-Foundry/super-ollama" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/Inference-Foundry/super-ollama/wiki/Roadmap" target="_blank" rel="noopener noreferrer">Roadmap</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Crucible</h3>
+            <p class="meta">Research journal &amp; lab notes</p>
+            <p>
+              A place for structured writeups, experiment logs, and reproducible procedures connected to our ML and systems work.
+            </p>
+            <div class="project-card__links">
+              <a href="https://github.com/Inference-Foundry/Crucible" target="_blank" rel="noopener noreferrer">Repository</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Quantization</h3>
+            <p class="meta">Planned</p>
+            <p>
+              Theory and experiments around quantization methods—details will live in a dedicated repository when it launches.
+            </p>
+            <div class="project-card__links">
+              <a href="https://github.com/Inference-Foundry/.github/blob/main/docs/projects/quantization.md" target="_blank" rel="noopener noreferrer">Org preview</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Prompt library</h3>
+            <p class="meta">Planned</p>
+            <p>
+              Curated open prompts and short analyses so practitioners can reuse and adapt patterns with clarity.
+            </p>
+            <div class="project-card__links">
+              <a href="https://github.com/Inference-Foundry/.github/blob/main/docs/projects/prompt-library.md" target="_blank" rel="noopener noreferrer">Org preview</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="principles" aria-labelledby="principles-heading">
+      <div class="section__inner">
+        <p class="section__eyebrow">How we work</p>
+        <h2 class="section__title" id="principles-heading">Principles</h2>
+        <p class="section__intro">
+          These expectations apply across our public spaces and reviews.
+        </p>
+        <ul class="principles">
+          <li><strong>Evidence over opinion.</strong> Performance claims belong with methodology: hardware, versions, and raw artifacts when possible.</li>
+          <li><strong>Safety and respect.</strong> Follow the organization <a href="https://github.com/Inference-Foundry/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>; debate the technical content, not the person.</li>
+          <li><strong>Scope discipline.</strong> Large features start with discussion in the relevant repo so maintainers and contributors share context early.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Get involved</h2>
+      <p>Join the community for roadmap discussion, design feedback, and contributor onboarding.</p>
+      <a class="btn btn--primary" href="https://discord.gg/inference-foundry" target="_blank" rel="noopener noreferrer">Join Discord</a>
+    </section>
   </main>
 
-  <!-- ======================================================
-       FOOTER
-       ====================================================== -->
-  <footer>
-    <span class="footer-copy">&copy; INFERENCE_FOUNDRY — ALL RIGHTS RESERVED</span>
-    <nav aria-label="External links">
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-brand">
+        <img src="assets/images/inference-foundry-logo.jpg" width="40" height="40" alt="" decoding="async" />
+        <span>Inference Foundry</span>
+      </div>
       <ul class="footer-links">
-        <li><a href="https://github.com/Inference-Foundry" target="_blank" rel="noopener noreferrer">[ GITHUB ]</a></li>
-        <li><a href="https://discord.gg" aria-label="Discord (coming soon)" aria-disabled="true">[ DISCORD ]</a></li>
-        <li><a href="#crucible" aria-label="Crucible Journal (coming soon)" aria-disabled="true">[ CRUCIBLE_JOURNAL ]</a></li>
+        <li><a href="https://github.com/Inference-Foundry" target="_blank" rel="noopener noreferrer">GitHub org</a></li>
+        <li><a href="https://github.com/Inference-Foundry/.github" target="_blank" rel="noopener noreferrer">Org handbook (.github)</a></li>
+        <li><a href="https://github.com/Inference-Foundry/.github/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a></li>
       </ul>
-    </nav>
+      <p class="site-footer__copy">&copy; Inference Foundry contributors</p>
+    </div>
   </footer>
-
 </body>
 </html>
