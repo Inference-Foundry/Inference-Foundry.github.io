@@ -13,6 +13,21 @@ Public website for the **Inference Foundry** GitHub organization, hosted with [G
 | `css/main.css` | Styles |
 | `assets/images/` | Logo and static imagery |
 
+## Homepage sections
+
+- Hero, focus areas, projects
+- Founders (with contact links and optional profile photos)
+- Principles and contact call-to-action
+
+## Founder image slots
+
+The site is pre-wired with optional founder photos. Add images here:
+
+- `assets/images/team/kritarth-dandapat.jpg`
+- `assets/images/team/atshal-ahmed-khan.jpg`
+
+If an image is missing, the page falls back to initials automatically.
+
 ## Local preview
 
 From this directory, serve static files (Python example):
